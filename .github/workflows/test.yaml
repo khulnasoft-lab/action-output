@@ -33,7 +33,7 @@ jobs:
       text: ${{ steps.set-text.outputs.value }}
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Set the Text
         id: set-text
         uses: ./
@@ -56,7 +56,7 @@ jobs:
     outputs:
       text: ${{ steps.set-text.outputs.value }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Set the Text
         id: set-text
         uses: ./
@@ -76,7 +76,7 @@ jobs:
     needs:
       - test-set-output
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: ./.github/actions/summary
         with:
           text: |

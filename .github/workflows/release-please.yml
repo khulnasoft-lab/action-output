@@ -25,7 +25,7 @@ jobs:
           release-type: simple
 
       # The logic below handles the npm publication:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         if: ${{ steps.release.outputs.release_created }}
 
       - name: tag major and minor versions
